@@ -1,0 +1,22 @@
+# Archivos temporales del sistema operativo
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Archivos de configuración del IDE
+.vscode/
+.idea/
+.agents/
+.gemini/
+
+# Carpetas de desarrollo y herramientas auxiliares (no indispensables)
+obtener_escenas/
+frames_animacion/
+
+# Documentos fuente de texto crudo y especificaciones iniciales
+TAL DE FER Corregida.md
+caracteristicas.md
+informacion.md
+
+# Archivos de registro (logs)
+*.log

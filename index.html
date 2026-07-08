@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sitio web oficial de CAOMI Sistemas Informáticos y Grupo RO+. Soluciones en soporte técnico, desarrollo de software, bases de datos y redes.">
+    <meta name="keywords" content="sistemas, soporte técnico, bases de datos, software a la medida, ERP, WMS, CRM, Tizayuca, Ecatepec">
+    <title>CAOMI Sistemas Informáticos | Grupo RO+</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Encabezado / Navegación Sticky -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo-text">CAOMI<span class="logo-plus">RO+</span></span>
+            </div>
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sección 1: Inicio -->
+        <section id="inicio" class="hero-section">
+            <!-- Raycast-inspired Animated Glow Background -->
+            <div class="hero-glow-bg">
+                <div class="glow-beam beam-1"></div>
+                <div class="glow-beam beam-2"></div>
+                <div class="glow-beam beam-3"></div>
+                <div class="glow-beam beam-4"></div>
+            </div>
+            <div class="container hero-container-centered">
+                <div class="hero-content">
+                    <span class="badge-premium">CAOMI • Grupo RO+</span>
+                    <h1>Llevamos la tecnología y soluciones que tu empresa necesita para crecer</h1>
+                    <p class="subtitle">Hacemos de los sistemas informáticos una herramienta estratégica para que alcances tus metas. Soporte técnico especializado, desarrollo a la medida, redes y consultoría.</p>
+                    <div class="hero-actions">
+                        <a href="#servicios" class="btn btn-primary">Ver Servicios</a>
+                        <a href="#contacto" class="btn btn-secondary">Contáctanos</a>
+                    </div>
+                    <div class="hero-footer-link">
+                        <a href="#nosotros" class="meet-glaze">Conoce Ecatepec & Tizayuca <span class="arrow">→</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 2: Nosotros -->
+        <section id="nosotros" class="about-section section-padding bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Quiénes Somos</h2>
+                    <p class="section-subtitle">Conoce nuestra trayectoria, misión y valores corporativos</p>
+                </div>
+                <div class="about-grid">
+                    <div class="about-info">
+                        <h3>Nuestra Historia</h3>
+                        <p>Fundada en 2009 como una alternativa confiable para las organizaciones que requieran el apoyo de sistemas informáticos para alcanzar sus objetivos. Liderada por profesionales con amplia experiencia en el uso y desarrollo de TI en diversas organizaciones.</p>
+                        <p>Contamos con oficinas de atención en Ecatepec, Estado de México y nuestra tienda física en Tizayuca, Hidalgo, brindando cobertura y atención personalizada.</p>
+                    </div>
+                    <div class="about-cards">
+                        <div class="card mission-card">
+                            <h4>Misión</h4>
+                            <p>Ofrecer soluciones informáticas accesibles, eficientes y personalizadas que impulsen la modernización tecnológica de empresas, instituciones y comunidades.</p>
+                        </div>
+                        <div class="card vision-card">
+                            <h4>Visión</h4>
+                            <p>Ser una empresa reconocida por su innovación, calidad y compromiso en el desarrollo de tecnologías que mejoran los procesos y la vida digital de nuestros clientes.</p>
+                        </div>
+                    </div>
+            </div>
+        </section>
+
+        <!-- Sección de Valores con Animación Scroll-Driven -->
+        <section id="valores-scroll" class="valores-scroll-section">
+            <div class="sticky-viewport">
+                <!-- Texto de fondo que hará zoom (Curio style) -->
+                <div class="valores-bg-text" id="valoresBgText">VALORES</div>
+                
+                <!-- Cuadros blancos con los nombres de los valores (placeholders de imágenes) -->
+                <div class="valores-cards-container" id="valoresCardsContainer">
+                    <div class="valor-card-white" tabindex="0">
+                        <span class="valor-number">01</span>
+                        <img src="img/innovacion.webp" alt="Innovación" class="valor-card-bg-img">
+                        <div class="valor-card-front">
+                            <h3>Innovación</h3>
+                        </div>
+                        <div class="valor-card-back">
+                            <h3>Innovación</h3>
+                            <p>Desarrollamos soluciones vanguardistas y eficientes para optimizar tus procesos.</p>
+                        </div>
+                    </div>
+                    <div class="valor-card-white" tabindex="0">
+                        <span class="valor-number">02</span>
+                        <img src="img/compromiso.webp" alt="Compromiso" class="valor-card-bg-img">
+                        <div class="valor-card-front">
+                            <h3>Compromiso</h3>
+                        </div>
+                        <div class="valor-card-back">
+                            <h3>Compromiso</h3>
+                            <p>Garantizamos puntualidad, ética y excelencia técnica en cada proyecto informático.</p>
+                        </div>
+                    </div>
+                    <div class="valor-card-white" tabindex="0">
+                        <span class="valor-number">03</span>
+                        <img src="img/calidad.webp" alt="Calidad" class="valor-card-bg-img">
+                        <div class="valor-card-front">
+                            <h3>Calidad</h3>
+                        </div>
+                        <div class="valor-card-back">
+                            <h3>Calidad</h3>
+                            <p>Ofrecemos el más alto estándar en soporte técnico, desarrollo de software e infraestructura.</p>
+                        </div>
+                    </div>
+                    <div class="valor-card-white" tabindex="0">
+                        <span class="valor-number">04</span>
+                        <img src="img/accesibilidad.webp" alt="Accesibilidad" class="valor-card-bg-img">
+                        <div class="valor-card-front">
+                            <h3>Accesibilidad</h3>
+                        </div>
+                        <div class="valor-card-back">
+                            <h3>Accesibilidad</h3>
+                            <p>Diseñamos herramientas intuitivas y soluciones tecnológicas al alcance de todos.</p>
+                        </div>
+                    </div>
+                    <div class="valor-card-white" tabindex="0">
+                        <span class="valor-number">05</span>
+                        <img src="img/trabajo_equipo.webp" alt="Trabajo en equipo" class="valor-card-bg-img">
+                        <div class="valor-card-front">
+                            <h3>Trabajo en equipo</h3>
+                        </div>
+                        <div class="valor-card-back">
+                            <h3>Trabajo en equipo</h3>
+                            <p>Colaboramos de forma estrecha y multidisciplinaria para multiplicar los resultados.</p>
+                        </div>
+                    </div>
+                    <div class="valor-card-white" tabindex="0">
+                        <span class="valor-number">06</span>
+                        <img src="img/responsabilidad_social.webp" alt="Responsabilidad social" class="valor-card-bg-img">
+                        <div class="valor-card-front">
+                            <h3>Responsabilidad social</h3>
+                        </div>
+                        <div class="valor-card-back">
+                            <h3>Responsabilidad social</h3>
+                            <p>Promovemos una TI verde: consumo eficiente y reciclaje de residuos de hardware.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Marquee Separator -->
+        <div class="marquee-divider">
+            <div class="marquee-track">
+                <div class="marquee-content">
+                    CAOMI ✦ GRUPO RO+ ✦ INNOVACIÓN ✦ SOLUCIONES TI ✦ SOPORTE TÉCNICO ✦ DESARROLLO WEB ✦ REDES ✦ CAOMI ✦ GRUPO RO+ ✦ INNOVACIÓN ✦ SOLUCIONES TI ✦ SOPORTE TÉCNICO ✦ DESARROLLO WEB ✦ REDES ✦&nbsp;
+                </div>
+                <div class="marquee-content" aria-hidden="true">
+                    CAOMI ✦ GRUPO RO+ ✦ INNOVACIÓN ✦ SOLUCIONES TI ✦ SOPORTE TÉCNICO ✦ DESARROLLO WEB ✦ REDES ✦ CAOMI ✦ GRUPO RO+ ✦ INNOVACIÓN ✦ SOLUCIONES TI ✦ SOPORTE TÉCNICO ✦ DESARROLLO WEB ✦ REDES ✦&nbsp;
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección 3: Servicios -->
+        <section id="servicios" class="services-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Servicios Especializados</h2>
+                    <p class="section-subtitle">Soluciones tecnológicas diseñadas para impulsar tu negocio</p>
+                </div>
+                <div class="services-carousel-wrapper">
+                    <div class="services-grid" id="servicesGrid">
+                        <div class="service-card" tabindex="0">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                                </svg>
+                            </div>
+                            <h3>Desarrollo de Software a la Medida</h3>
+                            <p>Diseño y construcción de sistemas corporativos, automatización de procesos empresariales y desarrollo web profesional adaptado a tus requerimientos.</p>
+                        </div>
+                        <div class="service-card" tabindex="0">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                                </svg>
+                            </div>
+                            <h3>Sistemas de Gestión</h3>
+                            <p>Implementación e integración de soluciones ERP, WMS/Administro para logística de almacenes, TMS para transporte, CRM y sistemas de Punto de Venta (POS) con Facturación Electrónica.</p>
+                        </div>
+                        <div class="service-card" tabindex="0">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                                    <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path>
+                                </svg>
+                            </div>
+                            <h3>Bases de Datos</h3>
+                            <p>Diseño, desarrollo, optimización y mantenimiento de bases de datos relacionales (SQL) asegurando la correcta persistencia y disponibilidad de la información.</p>
+                        </div>
+                        <div class="service-card" tabindex="0">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                                </svg>
+                            </div>
+                            <h3>Soporte Técnico y Redes</h3>
+                            <p>Asistencia especializada en infraestructura de TI, servidores, cableado estructurado, redes y conectividad para la continuidad operativa de tu empresa.</p>
+                        </div>
+                        <div class="service-card" tabindex="0">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="9" cy="21" r="1"></circle>
+                                    <circle cx="20" cy="21" r="1"></circle>
+                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                </svg>
+                            </div>
+                            <h3>Equipos y Consumibles</h3>
+                            <p>Venta y distribución de equipo de cómputo, servidores y consumibles informáticos garantizando tecnología de vanguardia mediante RO+ Informática.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 4: Catálogo de Productos -->
+        <section id="productos" class="products-section section-padding bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Catálogo Corporativo</h2>
+                    <p class="section-subtitle">Explora nuestra amplia gama de productos por categoría especializada</p>
+                </div>
+                
+                <div class="catalog-accordion" id="catalogAccordion">
+                    <!-- Categoría 1: Accesorios -->
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span>Accesorios</span>
+                            <span class="chevron-icon">▼</span>
+                        </button>
+                        <div class="accordion-content" style="--panel-color: #00e676;">
+                            <div class="accordion-inner">
+                                <div class="subcategory-grid">
+                                    <div class="subcategory-col">
+                                        <a href="#contacto">Almacenamiento</a>
+                                        <a href="#contacto">Audio/Video/Música</a>
+                                        <a href="#contacto">Cámaras</a>
+                                        <a href="#contacto">Escáners</a>
+                                        <a href="#contacto">De Escritorio</a>
+                                    </div>
+                                    <div class="subcategory-col">
+                                        <a href="#contacto">Notebook/Tablet</a>
+                                        <a href="#contacto">Proyectores</a>
+                                        <a href="#contacto">Telefónicos</a>
+                                        <a href="#contacto">Accesorios y Monitores</a>
+                                        <a href="#contacto">Automatización Doméstica</a>
+                                    </div>
+                                    <div class="subcategory-col">
+                                        <a href="#contacto">Controles Juegos PC</a>
+                                        <a href="#contacto">Dispositivos de Switch</a>
+                                        <a href="#contacto">Dispositivos Señaladores y Pizarras</a>
+                                        <a href="#contacto">Mouses</a>
+                                        <a href="#contacto">Teclados</a>
+                                    </div>
+                                </div>
+                                <div class="category-image-container">
+                                    <img src="img/cat_accesorios.png" alt="Accesorios y periféricos" class="category-image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Categoría 2: Almacenamiento -->
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span>Almacenamiento</span>
+                            <span class="chevron-icon">▼</span>
+                        </button>
+                        <div class="accordion-content" style="--panel-color: #b388ff;">
+                            <div class="accordion-inner">
+                                <div class="subcategory-grid">
+                                    <div class="subcategory-col">
+                                        <a href="#contacto">Controladores de disco</a>
+                                        <a href="#contacto">Sistemas NAS</a>
+                                        <a href="#contacto">Discos de Estado Sólido (SSD)</a>
+                                        <a href="#contacto">Sistemas SAN e Infraestructura</a>
+                                    </div>
+                                    <div class="subcategory-col">
+                                        <a href="#contacto">Discos Duros</a>
+                                        <a href="#contacto">Dispositivos de Respaldo</a>
+                                        <a href="#contacto">Gabinetes para Disco</a>
+                                        <a href="#contacto">Memorias Flash</a>
+                                    </div>
+                                    <div class="subcategory-col">
+                                        <a href="#contacto">Red Unificada de Almacenamiento</a>
+                                        <a href="#contacto">Media y Soportes</a>
+                                        <a href="#contacto" class="btn-cta-sub">Ve nuestros Productos...</a>
+                                    </div>
+                                </div>
+                                <div class="category-image-container">
+                                    <img src="img/cat_almacenamiento.png" alt="Dispositivos de Almacenamiento" class="category-image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Categoría 3: Audio / Video -->
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span>Audio / Video</span>
+                            <span class="chevron-icon">▼</span>
+                        </button>
+                        <div class="accordion-content" style="--panel-color: #ff1744;">
+                            <div class="accordion-inner">
+                                <div class="subcategory-grid">
+                                    <div class="subcategory-col">
+                                        <a href="#contacto">Audio</a>
+                                        <a href="#contacto">Cámaras</a>
+                                        <a href="#contacto">Sonido Profesional y Entretenimiento</a>
+                                    </div>
+                                    <div class="subcategory-col">
+                                        <a href="#contacto">Teatro en Casa</a>
+                                        <a href="#contacto">Video</a>
+                                        <a href="#contacto" class="btn-cta-sub">Ve nuestros Productos...</a>
+                                    </div>
+                                </div>
+                                <div class="category-image-container">
+                                    <img src="img/cat_audiovideo.png" alt="Equipos de Audio y Video" class="category-image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Categoría 4: Computadoras -->
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span>Computadoras</span>
+                            <span class="chevron-icon">▼</span>
+                        </button>
+                        <div class="accordion-content" style="--panel-color: #00e5ff;">
+                            <div class="accordion-inner">
+                                <div class="subcategory-grid">
+                                    <div class="subcategory-col">
+                                        <a href="#contacto">Computadoras de Escritorio</a>
+                                        <a href="#contacto">Computadoras Portátiles</a>
+                                        <a href="#contacto">Servidores para computadoras</a>
+                                        <a href="#contacto">Tablets</a>
+                                        <a href="#contacto">Tables-Notebooks 2 en 1</a>
+                                        <a href="#contacto">Servidores RAS/Terminal/Device</a>
+                                    </div>
+                                    <div class="subcategory-col">
+                                        <a href="#contacto">Thin Clients y terminales</a>
+                                        <a href="#contacto">Workstations</a>
+                                        <a href="#contacto">Gabinetes de Computadora y Montaje</a>
+                                        <a href="#contacto">Memorias</a>
+                                        <a href="#contacto">Procesadores</a>
+                                        <a href="#contacto">Tarjetas de Sonido</a>
+                                    </div>
+                                    <div class="subcategory-col">
+                                        <a href="#contacto">Tarjetas de Video y Captura</a>
+                                        <a href="#contacto">Tarjetas Madre</a>
+                                        <a href="#contacto">Accesorios y Monitores (Gaming)</a>
+                                        <a href="#contacto">Consolas</a>
+                                        <a href="#contacto">Videojuegos</a>
+                                        <a href="#contacto">Computadoras (Gaming)</a>
+                                        <a href="#contacto" class="btn-cta-sub">Ve nuestros Productos...</a>
+                                    </div>
+                                </div>
+                                <div class="category-image-container">
+                                    <img src="img/cat_computadoras.png" alt="Computadoras y Servidores" class="category-image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Categoría 5: Equipamiento Telefónico -->
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span>Equipamiento Telefónico</span>
+                            <span class="chevron-icon">▼</span>
+                        </button>
+                        <div class="accordion-content" style="--panel-color: #c6ff00;">
+                            <div class="accordion-inner">
+                                <div class="subcategory-grid">
+                                    <div class="subcategory-col">
+                                        <a href="#contacto">Dispositivos de Comunicación Móvil</a>
+                                        <a href="#contacto">Dispositivos de Consumo Telefónico</a>
+                                    </div>
+                                    <div class="subcategory-col">
+                                        <a href="#contacto">Equipo de Conferencia en video, Audio y Web</a>
+                                        <a href="#contacto">Sistemas telefónicos, teléfonos y componentes</a>
+                                    </div>
+                                    <div class="subcategory-col">
+                                        <a href="#contacto" class="btn-cta-sub">Ve nuestros Productos...</a>
+                                    </div>
+                                </div>
+                                <div class="category-image-container">
+                                    <img src="img/cat_telefonia.png" alt="Equipos Telefónicos" class="category-image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Categorías cerradas simples que enlazan a contacto -->
+                    <!-- Categoría 6: Impresoras y Plotters -->
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span>Impresoras y Plotters</span>
+                            <span class="chevron-icon">▼</span>
+                        </button>
+                        <div class="accordion-content" style="--panel-color: #ff5252;">
+                            <div class="accordion-inner">
+                                <div class="subcategory-grid">
+                                    <div class="subcategory-col">
+                                        <a href="#contacto">Impresoras Casa / Oficina</a>
+                                    </div>
+                                    <div class="subcategory-col">
+                                        <a href="#contacto">Multifuncionales</a>
+                                    </div>
+                                    <div class="subcategory-col">
+                                        <a href="#contacto">Plotters</a>
+                                    </div>
+                                </div>
+                                <div class="category-image-container">
+                                    <img src="img/cat_impresoras.png" alt="Impresoras y Plotters" class="category-image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Categoría 7: Protección Eléctrica -->
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span>Protección Eléctrica</span>
+                            <span class="chevron-icon">▼</span>
+                        </button>
+                        <div class="accordion-content" style="--panel-color: #ff4081;">
+                            <div class="accordion-inner">
+                                <div class="subcategory-grid">
+                                    <div class="subcategory-col">
+                                        <a href="#contacto">Equipamiento de Energía</a>
+                                    </div>
+                                    <div class="subcategory-col">
+                                        <a href="#contacto">Equipamiento para Rack</a>
+                                    </div>
+                                    <div class="subcategory-col">
+                                        <a href="#contacto">Fuentes de Poder</a>
+                                    </div>
+                                </div>
+                                <div class="category-image-container">
+                                    <img src="img/cat_proteccion.png" alt="Equipamiento de Protección Eléctrica" class="category-image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Categoría 8: Punto de Venta, AIDC y Código de Barras -->
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span>Punto de Venta, AIDC y Código de Barras</span>
+                            <span class="chevron-icon">▼</span>
+                        </button>
+                        <div class="accordion-content" style="--panel-color: #7b1fa2;">
+                            <div class="accordion-inner">
+                                <div class="subcategory-grid">
+                                    <div class="subcategory-col">
+                                        <a href="#contacto">Accesorios AIDC Wireless</a>
+                                        <a href="#contacto">Impresoras POS</a>
+                                        <a href="#contacto">Accesorios Auto ID</a>
+                                        <a href="#contacto">Infraestructura AIDC Wireless</a>
+                                        <a href="#contacto">Accesorios POS Retail</a>
+                                        <a href="#contacto">Lectores POS</a>
+                                    </div>
+                                    <div class="subcategory-col">
+                                        <a href="#contacto">Accesorios Universales</a>
+                                        <a href="#contacto">Lectores RFID</a>
+                                        <a href="#contacto">AIDC/POS Software</a>
+                                        <a href="#contacto">Periféricos POS</a>
+                                        <a href="#contacto">Escáner de código de Barras Auto ID</a>
+                                        <a href="#contacto">Suministros POS Retail y Auto ID</a>
+                                    </div>
+                                    <div class="subcategory-col">
+                                        <a href="#contacto">Garantías, Pago de Contratos</a>
+                                        <a href="#contacto">Terminales AIDC</a>
+                                        <a href="#contacto">Impresoras Auto ID</a>
+                                        <a href="#contacto" class="btn-cta-sub">Ve nuestros Productos...</a>
+                                    </div>
+                                </div>
+                                <div class="category-image-container">
+                                    <img src="img/cat_pos.png" alt="Punto de Venta y Código de Barras" class="category-image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Categoría 9: Redes -->
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span>Redes</span>
+                            <span class="chevron-icon">▼</span>
+                        </button>
+                        <div class="accordion-content" style="--panel-color: #8bc34a;">
+                            <div class="accordion-inner">
+                                <div class="subcategory-grid">
+                                    <div class="subcategory-col">
+                                        <a href="#contacto">Redes Inalámbricas</a>
+                                        <a href="#contacto">Routers y Componentes</a>
+                                        <a href="#contacto">Seguridad de redes</a>
+                                    </div>
+                                    <div class="subcategory-col">
+                                        <a href="#contacto">Switches y Hubs</a>
+                                        <a href="#contacto">Tarjetas de Red</a>
+                                        <a href="#contacto">Transceptores y Convertidores</a>
+                                    </div>
+                                    <div class="subcategory-col">
+                                        <a href="#contacto" class="btn-cta-sub">Ve nuestros Productos...</a>
+                                    </div>
+                                </div>
+                                <div class="category-image-container">
+                                    <img src="img/cat_redes.png" alt="Equipos de Redes y Conectividad" class="category-image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Categoría 10: Software -->
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span>Software</span>
+                            <span class="chevron-icon">▼</span>
+                        </button>
+                        <div class="accordion-content" style="--panel-color: #ffd54f;">
+                            <div class="accordion-inner">
+                                <div class="subcategory-grid">
+                                    <div class="subcategory-col">
+                                        <a href="#contacto">Software de Productividad Empresarial</a>
+                                        <a href="#contacto">Software Imagen y Firma Digital</a>
+                                        <a href="#contacto">Software Almacenamiento</a>
+                                        <a href="#contacto">Software Productividad Office</a>
+                                        <a href="#contacto">Software Gestionamiento IT</a>
+                                    </div>
+                                    <div class="subcategory-col">
+                                        <a href="#contacto">Software Seguridad</a>
+                                        <a href="#contacto">Software Virtualización</a>
+                                        <a href="#contacto">Software Sistemas Operativos</a>
+                                        <a href="#contacto">Software Desarrollo</a>
+                                        <a href="#contacto">Software Soluciones de Negocio</a>
+                                    </div>
+                                    <div class="subcategory-col">
+                                        <a href="#contacto">Software Entretenimiento</a>
+                                        <a href="#contacto">Software Finanzas</a>
+                                        <a href="#contacto">Software Gestiónde Datos</a>
+                                        <a href="#contacto" class="btn-cta-sub">Ve nuestros Productos...</a>
+                                    </div>
+                                </div>
+                                <div class="category-image-container">
+                                    <img src="img/cat_software.png" alt="Licenciamiento de Software" class="category-image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Categorías cerradas simples que enlazan a contacto -->
+                    <!-- Categoría 11: Suministros -->
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span>Suministros</span>
+                            <span class="chevron-icon">▼</span>
+                        </button>
+                        <div class="accordion-content" style="--panel-color: #ff9800;">
+                            <div class="accordion-inner">
+                                <div class="subcategory-grid">
+                                    <div class="subcategory-col">
+                                        <a href="#contacto">Cartuchos de Limpieza</a>
+                                    </div>
+                                    <div class="subcategory-col">
+                                        <a href="#contacto">Suministros de Impresión</a>
+                                    </div>
+                                    <div class="subcategory-col">
+                                        <a href="#contacto">Suministros de Oficina</a>
+                                        <a href="#contacto" class="btn-cta-sub">Ve nuestros Productos...</a>
+                                    </div>
+                                </div>
+                                <div class="category-image-container">
+                                    <img src="img/cat_suministros.png" alt="Suministros Informáticos y de Oficina" class="category-image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Categoría 12: Papelería y Artículos de Oficina -->
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <span>Papelería y Artículos de Oficina</span>
+                            <span class="chevron-icon">▼</span>
+                        </button>
+                        <div class="accordion-content" style="--panel-color: #7e57c2;">
+                            <div class="accordion-inner">
+                                <div class="subcategory-grid">
+                                    <div class="subcategory-col">
+                                        <a href="#contacto">Arte</a>
+                                        <a href="#contacto">Manualidades</a>
+                                        <a href="#contacto">Dibujo</a>
+                                        <a href="#contacto">Muebles</a>
+                                        <a href="#contacto">Papeles</a>
+                                    </div>
+                                    <div class="subcategory-col">
+                                        <a href="#contacto">Contenedores</a>
+                                        <a href="#contacto">Escritura</a>
+                                        <a href="#contacto">Oficina</a>
+                                        <a href="#contacto">Adhesivos</a>
+                                        <a href="#contacto">Escolar</a>
+                                    </div>
+                                    <div class="subcategory-col">
+                                        <a href="#contacto">Didácticos</a>
+                                        <a href="#contacto">Cuadernos</a>
+                                        <a href="#contacto">Impresos</a>
+                                        <a href="#contacto">Archivo y empaque</a>
+                                        <a href="#contacto" class="btn-cta-sub">Ve nuestros Productos...</a>
+                                    </div>
+                                </div>
+                                <div class="category-image-container">
+                                    <img src="img/cat_papeleria.png" alt="Papelería y Artículos de Oficina" class="category-image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 5: Contacto -->
+        <section id="contacto" class="contact-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Contacto</h2>
+                    <p class="section-subtitle">¿Tienes algún proyecto en mente? Escríbenos o llámanos</p>
+                </div>
+                <div class="contact-layout">
+                    <div class="contact-info-panel">
+                        <h3>Información de Contacto</h3>
+                        <div class="info-item">
+                            <span class="info-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </span>
+                            <p><strong>Oficina Ecatepec:</strong> Amapola # 15 int. 6 y 7, Col. La Florida, Ecatepec, Estado de México. CP. 55240</p>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                            </span>
+                            <p><strong>Teléfonos:</strong> 5526640485 | 5544428732</p>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </span>
+                            <p><strong>Email:</strong> <a href="mailto:soporte.rosistemasinfo@outlook.com.mx">soporte.rosistemasinfo@outlook.com.mx</a></p>
+                        </div>
+                        <div class="map-container">
+                            <iframe src="https://maps.google.com/maps?q=Amapola%2015%2C%20La%20Florida%2C%20Ecatepec%2C%20Estado%20de%20M%C3%A9xico&t=&z=16&ie=UTF8&iwloc=&output=embed" width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-panel">
+                        <!-- Formulario configurado con Netlify Forms y redirección de éxito -->
+                        <form name="contacto" method="POST" data-netlify="true" action="confirmacion.html">
+                            <div class="form-group">
+                                <label for="nombre">Nombre Completo</label>
+                                <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Correo Electrónico</label>
+                                <input type="email" id="email" name="email" placeholder="Ej. juan@correo.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefono">Teléfono (WhatsApp)</label>
+                                <input type="tel" id="telefono" name="telefono" placeholder="Ej. 5512345678">
+                            </div>
+                            <div class="form-group">
+                                <label for="mensaje">Mensaje / Requerimiento</label>
+                                <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos en qué te podemos ayudar..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-submit">Enviar Mensaje</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <p>&copy; 2012-2026 CAOMI Sistemas Informáticos - Grupo RO+. Todos los derechos reservados.</p>
+            <div class="footer-links">
+                <a href="#inicio">Inicio</a> | 
+                <a href="#nosotros">Nosotros</a> | 
+                <a href="#servicios">Servicios</a> | 
+                <a href="#productos">Productos</a> | 
+                <a href="#contacto">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
