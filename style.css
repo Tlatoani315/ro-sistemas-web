@@ -732,33 +732,56 @@ body {
 
 @media (max-width: 768px) {
     .valores-scroll-section {
-        height: auto; /* Desactivar scroll-driven en móviles para mejor usabilidad */
+        height: 250vh; /* Mantener scroll-driven activo en móvil */
     }
     
     .valores-scroll-section .sticky-viewport {
-        position: relative;
-        height: auto;
-        padding: 80px 20px;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        padding: 20px;
     }
     
     .valores-bg-text {
-        position: relative;
-        font-size: 4rem;
-        margin-bottom: 40px;
-        opacity: 0.1;
+        font-size: 20vw !important; /* Texto de fondo más grande para móviles */
+        opacity: 0.8;
     }
     
     .valores-cards-container {
-        opacity: 1 !important;
-        transform: none !important;
-        grid-template-columns: 1fr;
-        gap: 20px;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+        padding: 15px !important;
+        max-width: 100% !important;
     }
     
     .valor-card-white {
         width: 100%;
-        height: 200px;
-        padding: 24px;
+        height: 110px !important; /* Altura compacta para móviles */
+        border-radius: 16px !important;
+    }
+    
+    .valor-card-front h3 {
+        font-size: 0.92rem !important;
+    }
+    
+    .valor-card-back {
+        padding: 12px 10px !important;
+    }
+    
+    .valor-card-back h3 {
+        font-size: 0.85rem !important;
+        margin-bottom: 4px !important;
+    }
+    
+    .valor-card-back p {
+        font-size: 0.72rem !important;
+        line-height: 1.25 !important;
+    }
+    
+    .valor-number {
+        top: 8px !important;
+        left: 12px !important;
+        font-size: 0.8rem !important;
     }
 }
 
@@ -1214,11 +1237,78 @@ body {
     text-decoration: none;
 }
 
+.contact-general-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 20px;
+}
+
+.branches-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.branch-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.branch-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.branch-header h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.branch-header .info-icon {
+    width: 32px;
+    height: 32px;
+    background-color: rgba(0, 230, 118, 0.06);
+    border-radius: 8px;
+}
+
+.branch-header .info-icon svg {
+    width: 14px;
+    height: 14px;
+}
+
+.branch-details {
+    flex-grow: 1;
+    margin-bottom: 10px;
+}
+
+.branch-details p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+    margin-bottom: 6px;
+}
+
+.branch-details a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.branch-details a:hover {
+    text-decoration: underline;
+}
+
 .map-container {
     width: 100%;
-    height: 220px;
-    margin-top: 20px;
-    border-radius: 16px;
+    height: 140px;
+    border-radius: 12px;
     overflow: hidden;
     border: 1px solid var(--border);
     transition: border-color 0.4s ease, box-shadow 0.4s ease;
@@ -1243,6 +1333,12 @@ body {
     border-radius: 24px;
 }
 
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
 .form-group {
     margin-bottom: 24px;
 }
@@ -1263,7 +1359,7 @@ body {
     border: 1px solid var(--border);
     border-radius: 12px;
     font-family: inherit;
-    font-size: 0.95rem;
+    font-size: 16px; /* 16px para prevenir auto-zoom táctil de iOS Safari */
     color: var(--text-main);
     transition: var(--transition);
 }
@@ -1416,6 +1512,23 @@ body {
 
     .info-item {
         gap: 12px;
+    }
+
+    .contact-general-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+    }
+
+    .branches-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
     }
 
     .footer-content {

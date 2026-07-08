@@ -77,14 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (valoresScrollSection && valoresBgText && valoresCardsContainer) {
         const handleScrollAnimation = () => {
-            // Desactivar en pantallas móviles para mejor accesibilidad y rendimiento
-            if (window.innerWidth <= 768) {
-                valoresBgText.style.transform = '';
-                valoresBgText.style.opacity = '';
-                valoresCardsContainer.style.transform = '';
-                valoresCardsContainer.style.opacity = '';
-                return;
-            }
+
 
             const rect = valoresScrollSection.getBoundingClientRect();
             const sectionHeight = rect.height;

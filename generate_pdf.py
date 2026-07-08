@@ -193,11 +193,11 @@ def build_pdf(filename="catalogo.pdf"):
     portada_data = [
         [
             Paragraph("<b>Ubicación:</b> Ecatepec, Edo. Méx. / Tizayuca, Hgo.", style_card_body),
-            Paragraph("<b>Teléfonos:</b> 5526640485 / 5544428732", style_card_body),
+            Paragraph("<b>Teléfonos:</b> Cel. 5544428732 / Fijo. 5551212482", style_card_body),
             Paragraph("<b>Email:</b> soporte.rosistemasinfo@outlook.com.mx", style_card_body)
         ]
     ]
-    t_portada = Table(portada_data, colWidths=[2.2*inch, 2.2*inch, 2.6*inch])
+    t_portada = Table(portada_data, colWidths=[2.1*inch, 2.3*inch, 2.6*inch])
     t_portada.setStyle(TableStyle([
         ('BACKGROUND', (0,0), (-1,-1), CARD_COLOR),
         ('ALIGN', (0,0), (-1,-1), 'CENTER'),
@@ -444,12 +444,14 @@ def build_pdf(filename="catalogo.pdf"):
         [
             Paragraph(
                 "<b>Dirección:</b> Amapola # 15 int. 6 y 7, Col. La Florida, Ecatepec, Estado de México. CP. 55240<br/>"
-                "<b>Teléfonos:</b> 5526640485 / 5544428732<br/>"
+                "<b>Fijo Ecatepec:</b> 5551212482<br/>"
+                "<b>Celular:</b> 5544428732<br/>"
                 "<b>Email:</b> soporte.rosistemasinfo@outlook.com.mx", style_card_body
             ),
             Paragraph(
-                "<b>Dirección:</b> Sucursal Tizayuca, Hidalgo.<br/>"
-                "<b>Teléfonos:</b> 5526640485 / 5544428732<br/>"
+                "<b>Dirección:</b> 3a CDA. de Humbolt # 21, Barrio de Atempa, Tizayuca, Hidalgo. CP. 43808<br/>"
+                "<b>Fijo Tizayuca:</b> 7797966789<br/>"
+                "<b>Celular:</b> 5544428732<br/>"
                 "<b>Email:</b> soporte.rosistemasinfo@outlook.com.mx", style_card_body
             )
         ]
