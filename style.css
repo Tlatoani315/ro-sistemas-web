@@ -838,9 +838,21 @@ body {
    ========================================================================== */
 .services-carousel-wrapper {
     width: 100%;
-    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
     position: relative;
     padding: 40px 0;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+    cursor: grab;
+}
+
+.services-carousel-wrapper::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.services-carousel-wrapper:active {
+    cursor: grabbing;
 }
 
 .services-grid {
@@ -848,18 +860,7 @@ body {
     gap: 30px;
     width: max-content;
     padding: 20px 0;
-    /* Animación constante y uniforme de desplazamiento */
-    animation: services-marquee 35s linear infinite;
-}
-
-/* Detener en hover sobre el carrusel */
-.services-carousel-wrapper:hover .services-grid {
-    animation-play-state: paused;
-}
-
-/* Detener por clase activa de interacción (clic / foco) */
-.services-grid.paused {
-    animation-play-state: paused !important;
+    animation: none !important; /* Desactivada para control JS optimizado */
 }
 
 .service-card {
@@ -877,6 +878,7 @@ body {
     cursor: pointer;
     outline: none;
     user-select: none;
+    -webkit-user-drag: none;
 }
 
 /* Efecto hover/focus individual */
@@ -898,6 +900,14 @@ body {
     font-size: 2.2rem;
     margin-bottom: 24px;
     color: var(--accent);
+}
+
+.service-icon svg {
+    width: 40px;
+    height: 40px;
+    stroke: var(--accent);
+    stroke-width: 2;
+    display: block;
 }
 
 .service-card h3 {

@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 6. Carrusel Auto-ejecutable Infinito Constante de Servicios Especializados (Estilo Premium)
+    // 6. Carrusel Auto-ejecutable Infinito Constante de Servicios Especializados (Drag, Touch & Scroll-Optimized)
     const servicesWrapper = document.querySelector('.services-carousel-wrapper');
     const servicesGrid = document.getElementById('servicesGrid');
     const initialCards = document.querySelectorAll('.service-card');
@@ -154,76 +154,150 @@ document.addEventListener('DOMContentLoaded', () => {
             servicesGrid.appendChild(clone);
         });
 
-        // Obtener el listado actualizado de tarjetas (originales + clones)
         const serviceCards = document.querySelectorAll('.service-card');
+        
+        let scrollSpeed = 0.6; // Desplazamiento ultra suave por frame
+        let isDown = false;
+        let startX;
+        let scrollLeftVal;
+        let isInteracting = false;
+        let resumeTimeout = null;
+        let selectedTimeout = null;
 
-        let interactionTimeout = null;
+        // Bucle de animación para auto-scroll
+        const autoScroll = () => {
+            if (!isInteracting && !isDown) {
+                servicesWrapper.scrollLeft += scrollSpeed;
+            }
+            requestAnimationFrame(autoScroll);
+        };
 
-        // Calcular el desplazamiento total necesario para el ciclo infinito (ancho de N tarjetas + gaps)
-        const calculateScrollWidth = () => {
+        // Iniciar auto-scroll
+        requestAnimationFrame(autoScroll);
+
+        // Control de límites infinito en scroll
+        const handleScrollBounds = () => {
             const firstCard = serviceCards[0];
             if (!firstCard) return;
-            
             const cardWidth = firstCard.offsetWidth;
-            const gap = 30; // Igual al gap en CSS
-            
-            const scrollWidth = originalCount * (cardWidth + gap);
-            // Fijar la propiedad CSS custom para la animación linear constante
-            servicesGrid.style.setProperty('--scroll-width', `-${scrollWidth}px`);
+            const gap = 30; // Gap en CSS
+            const totalOriginalWidth = originalCount * (cardWidth + gap);
+
+            if (servicesWrapper.scrollLeft >= totalOriginalWidth) {
+                servicesWrapper.scrollLeft -= totalOriginalWidth;
+            } else if (servicesWrapper.scrollLeft <= 0) {
+                servicesWrapper.scrollLeft += totalOriginalWidth;
+            }
         };
 
-        // Escuchar clics y foco para detener la marcha y ampliar tarjeta
-        const handleInteraction = (activeCard) => {
-            clearTimeout(interactionTimeout);
-            
-            // Remover estado selected y pausado previo
-            serviceCards.forEach(card => card.classList.remove('selected'));
-            servicesGrid.classList.remove('paused');
-            
-            // Pausar el carrusel y ampliar la tarjeta seleccionada
-            servicesGrid.classList.add('paused');
-            activeCard.classList.add('selected');
-            
-            // Sincronizar el clon o el original correspondiente para coherencia visual
-            const cardArray = Array.from(serviceCards);
-            const index = cardArray.indexOf(activeCard);
-            const baseIndex = index % originalCount;
-            cardArray[baseIndex].classList.add('selected');
-            cardArray[baseIndex + originalCount].classList.add('selected');
+        servicesWrapper.addEventListener('scroll', handleScrollBounds);
 
-            // Reanudar la animación constante tras 2 segundos sin interactuar (2000ms)
-            interactionTimeout = setTimeout(() => {
-                servicesGrid.classList.remove('paused');
+        // Reanudar el auto-scroll
+        const resumeAutoScroll = () => {
+            clearTimeout(resumeTimeout);
+            resumeTimeout = setTimeout(() => {
+                isInteracting = false;
+                // Quitar estados de selección
                 serviceCards.forEach(card => card.classList.remove('selected'));
-            }, 2000);
+            }, 2500);
         };
 
-        // Agregar listeners de clic y foco a todas las tarjetas
-        serviceCards.forEach((card) => {
-            card.addEventListener('click', (e) => {
-                e.stopPropagation();
-                handleInteraction(card);
-            });
-
-            card.addEventListener('focus', () => {
-                handleInteraction(card);
-            });
+        // 1. Eventos de Mouse (Arrastrar con clic)
+        servicesWrapper.addEventListener('mousedown', (e) => {
+            isDown = true;
+            isInteracting = true;
+            clearTimeout(resumeTimeout);
+            startX = e.pageX - servicesWrapper.offsetLeft;
+            scrollLeftVal = servicesWrapper.scrollLeft;
         });
 
-        // Permitir reanudación si hacen clic fuera de cualquier tarjeta
-        document.addEventListener('click', () => {
-            if (servicesGrid.classList.contains('paused')) {
-                servicesGrid.classList.remove('paused');
-                serviceCards.forEach(card => card.classList.remove('selected'));
+        servicesWrapper.addEventListener('mouseleave', () => {
+            if (isDown) {
+                isDown = false;
+                resumeAutoScroll();
             }
         });
 
-        // Calcular ancho responsivo inicialmente y al redimensionar
-        calculateScrollWidth();
-        window.addEventListener('resize', calculateScrollWidth);
-        
-        // Ejecución diferida para asegurar la carga completa de estilos y anchos
-        setTimeout(calculateScrollWidth, 150);
+        servicesWrapper.addEventListener('mouseup', () => {
+            if (isDown) {
+                isDown = false;
+                resumeAutoScroll();
+            }
+        });
+
+        servicesWrapper.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - servicesWrapper.offsetLeft;
+            const walk = (x - startX) * 1.5; // Multiplicador de arrastre
+            servicesWrapper.scrollLeft = scrollLeftVal - walk;
+        });
+
+        // 2. Eventos Táctiles (Swipe en móviles)
+        servicesWrapper.addEventListener('touchstart', () => {
+            isInteracting = true;
+            clearTimeout(resumeTimeout);
+        });
+
+        servicesWrapper.addEventListener('touchend', () => {
+            resumeAutoScroll();
+        });
+
+        // 3. Pausar en Hover (Escritorio)
+        servicesWrapper.addEventListener('mouseenter', () => {
+            isInteracting = true;
+            clearTimeout(resumeTimeout);
+        });
+
+        servicesWrapper.addEventListener('mouseleave', () => {
+            if (!isDown) {
+                isInteracting = false;
+            }
+        });
+
+        // 4. Interacción al hacer clic/foco en las tarjetas
+        const handleCardInteraction = (activeCard) => {
+            isInteracting = true;
+            clearTimeout(resumeTimeout);
+            clearTimeout(selectedTimeout);
+
+            // Quitar clase selected previa
+            serviceCards.forEach(card => card.classList.remove('selected'));
+
+            // Agregar clase selected a la tarjeta actual y a su clon
+            activeCard.classList.add('selected');
+            const cardArray = Array.from(serviceCards);
+            const index = cardArray.indexOf(activeCard);
+            const baseIndex = index % originalCount;
+            
+            cardArray[baseIndex].classList.add('selected');
+            cardArray[baseIndex + originalCount].classList.add('selected');
+
+            // Temporizador para quitar la selección y reanudar
+            selectedTimeout = setTimeout(() => {
+                serviceCards.forEach(card => card.classList.remove('selected'));
+                isInteracting = false;
+            }, 3000);
+        };
+
+        serviceCards.forEach(card => {
+            card.addEventListener('click', (e) => {
+                e.stopPropagation();
+                handleCardInteraction(card);
+            });
+
+            card.addEventListener('focus', () => {
+                handleCardInteraction(card);
+            });
+        });
+
+        // Clic fuera para cancelar selección
+        document.addEventListener('click', () => {
+            serviceCards.forEach(card => card.classList.remove('selected'));
+            if (isInteracting && !isDown) {
+                isInteracting = false;
+            }
+        });
     }
 
     // 3. Validación y Envío del Formulario
